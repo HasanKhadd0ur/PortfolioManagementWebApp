@@ -8,6 +8,7 @@ namespace cleanArchWebApp.ApplicationCore.Enities
 
         public String  Description { get; set; }
 
+        public String  ImagePath { get; set; }
         public int Budget { get; set; }
 
         public Owner Owner { get; set; }
