@@ -2,7 +2,7 @@
 
 namespace cleanArchWebApp.ApplicationCore.Enities
 {
-    class User : EntityBase
+    class Owner : EntityBase
     {
         public String FirstName  { get; set; }
         public String lastName { get; set; }

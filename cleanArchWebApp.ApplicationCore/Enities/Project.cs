@@ -10,7 +10,7 @@ namespace cleanArchWebApp.ApplicationCore.Enities
 
         public int Budget { get; set; }
 
-        public User Owner { get; set; }
+        public Owner Owner { get; set; }
 
     }
 
