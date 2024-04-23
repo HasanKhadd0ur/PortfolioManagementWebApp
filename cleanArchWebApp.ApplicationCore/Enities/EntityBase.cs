@@ -8,6 +8,6 @@ namespace cleanArchWebApp.ApplicationCore.Enities
 {
     class EntityBase
     {
-        public Guid Id { get; set; }
+        public int  Id { get; set; }
     }
 }
