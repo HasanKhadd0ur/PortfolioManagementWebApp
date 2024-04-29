@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace cleanArchWebApp.ApplicationCore.Interfaces
 {
-    interface IGenericRespository<T> where T : class 
+    public  interface IGenericRespository<T> where T : class 
     {
         IEnumerable<T> GetAll();
-        T Update(T entities);
+        void Update(T entities);
         T Insert(T entities);
         T GetById(object  id);
         void Delete(object id);

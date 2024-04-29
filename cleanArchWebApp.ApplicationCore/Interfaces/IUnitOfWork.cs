@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace cleanArchWebApp.ApplicationCore.Interfaces
 {
-    interface IUnitOfWork<T> where T : class 
+    public interface IUnitOfWork<T> where T : class 
     {
-        IGenericRespository<T> Entity { get; set; }
+        IGenericRespository<T> Entity { get;  }
         void Save(); 
 
     }
