@@ -2,7 +2,7 @@
 
 namespace cleanArchWebApp.ApplicationCore.Enities
 {
-    class Address : EntityBase
+    public class Address : EntityBase
     {
         public int StreetNumber { get; set; }
 

@@ -2,7 +2,7 @@
 
 namespace cleanArchWebApp.ApplicationCore.Enities
 {
-    class Project : EntityBase
+    public class Project : EntityBase
     {
         public String  ProjectName { get; set; }
 

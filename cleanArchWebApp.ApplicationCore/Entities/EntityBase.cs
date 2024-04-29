@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cleanArchWebApp.ApplicationCore.Enities
 {
-    class EntityBase
+    public class EntityBase
     {
         public int  Id { get; set; }
     }
