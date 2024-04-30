@@ -42,8 +42,11 @@ namespace cleanArchWebApp.Infrastructure
           //  OnModelCreatingPartial(modelBuilder);
         }
 
-        //partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-TI6EF1L\\SQLEXPRESS;Initial Catalog=portfoilo;Integrated Security=True");
+        }
 
     }
 }
