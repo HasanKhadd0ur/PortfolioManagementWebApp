@@ -10,6 +10,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using cleanArchWebApp.Infrastructure.UnitOfWork;
+using cleanArchWebApp.Infrastructure.Respository;
+using cleanArchWebApp.ApplicationCore.Interfaces;
 
 namespace cleanArchWebApp.WebPresentation
 {
@@ -25,8 +28,12 @@ namespace cleanArchWebApp.WebPresentation
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+            
+            services.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
+
             services.AddDbContext<ProtofoiloDBContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+                options.UseSqlServer(Configuration.GetConnectionString("a")));
 
             services.AddControllersWithViews();
 

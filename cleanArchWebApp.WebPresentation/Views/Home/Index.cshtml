@@ -1,21 +1,22 @@
-﻿@*
+﻿@model HomeViewModel ;
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-    
+
 *@
 @{
     ViewData["title"] = "Home";
 
-    ViewData["userName"] = "Hasan";
+    ViewData["userName"] = Model.Owner.FirstName + " " + Model.Owner.lastName;
 }
 <!-- Masthead -->
 <header class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
 
         <!-- Masthead Avatar Image -->
-        <img class="masthead-avatar mb-5" src="img/avatar.jpg" style="border-radius:50%" alt="">
+        <img class="masthead-avatar mb-5" src="img/@Model.Owner.ImagePath" style="border-radius:50%" alt="">
 
         <!-- Masthead Heading -->
-        <h1 class="masthead-heading text-uppercase mb-0">Start Bootstrap</h1>
+        <h1 class="masthead-heading text-uppercase mb-0">@(Model.Owner.FirstName +" "+ Model.Owner.lastName)</h1>
 
         <!-- Icon Divider -->
         <div class="divider-custom divider-light">
@@ -27,7 +28,7 @@
         </div>
 
         <!-- Masthead Subheading -->
-        <p class="masthead-subheading font-weight-light mb-0">Graphic Artist - Web Designer - Illustrator</p>
+        <p class="masthead-subheading font-weight-light mb-0">@Model.Owner.BIO</p>
 
     </div>
 </header>
@@ -51,78 +52,23 @@
         <!-- Portfolio Grid Items -->
         <div class="row">
 
-            <!-- Portfolio Item 1 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/instagram.png" alt="">
-                </div>
-            </div>
+            @foreach (var item in Model.Projects)
+            {
 
-            <!-- Portfolio Item 2 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal2">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/gps.png" alt="">
-                </div>
-            </div>
 
-            <!-- Portfolio Item 3 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal3">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/flappy.png" alt="">
-                </div>
-            </div>
 
-            <!-- Portfolio Item 4 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal4">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
+                <!-- Portfolio Item  -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#item-@(item.Id)">
+                        <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                            <div class="portfolio-item-caption-content text-center text-white">
+                                <i class="fas fa-plus fa-3x"></i>
+                            </div>
                         </div>
+                        <img class="img-fluid" src=@("img/portfolio/" + (item.ImagePath == null ? "instagram.png" :item.ImagePath) ) alt="">
                     </div>
-                    <img class="img-fluid" src="img/portfolio/ecole.png" alt="">
                 </div>
-            </div>
-
-            <!-- Portfolio Item 5 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal5">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/commercial.png" alt="">
-                </div>
-            </div>
-
-            <!-- Portfolio Item 6 -->
-            <div class="col-md-6 col-lg-4">
-                <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                    <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                        <div class="portfolio-item-caption-content text-center text-white">
-                            <i class="fas fa-plus fa-3x"></i>
-                        </div>
-                    </div>
-                    <img class="img-fluid" src="img/portfolio/angry.png" alt="">
-                </div>
-            </div>
-
+            }
         </div>
         <!-- /.row -->
 
@@ -226,3 +172,50 @@
 
     </div>
 </section>
+
+@foreach (var item in Model.Projects)
+{
+    <!-- Portfolio Modal  -->
+    <div class="portfolio-modal modal fade" id="item-@(item.Id)" tabindex="-1" role="dialog" aria-labelledby="label-@item.Id" aria-hidden="true">
+
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title -->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">@item.ProjectName </h2>
+                                <!-- Icon Divider -->
+                                <div class="divider-custom">
+                                    <div class="divider-custom-line"></div>
+                                    <div class="divider-custom-icon">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="divider-custom-line"></div>
+                                </div>
+                                <!-- Portfolio Modal - Image -->
+                                <img class="img-fluid rounded mb-5" src=@("img/portfolio/" + (item.ImagePath == null ? "instagram.png" :item.ImagePath) ) alt="">
+                                <!-- Portfolio Modal - Text -->
+                                <p class="mb-5">project Description : @item.Description</p>
+                                <p class="mb-5">project cost : @item.Budget</p>
+                                <p class="mb-5">project ownr : @item.Owner.FirstName</p>
+                                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
+                                    Close Window
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+}
