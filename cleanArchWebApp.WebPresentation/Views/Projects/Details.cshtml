@@ -1,0 +1,57 @@
+﻿@model cleanArchWebApp.ApplicationCore.Enities.Project
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div style="padding:120px">
+    <div class="">
+
+        <h1>Details</h1>
+
+        <div class="">
+            <h4>Project</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ProjectName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ProjectName)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.ImagePath)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.ImagePath)
+                </dd>
+
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Budget)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Budget)
+                </dd>
+
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Owner.FirstName)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Owner.FirstName)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+
+
+    </div>
+</div>

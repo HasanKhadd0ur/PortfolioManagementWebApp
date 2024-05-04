@@ -1,0 +1,15 @@
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\cleanArchWebApp.ApplicationCore.deps.json
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\cleanArchWebApp.ApplicationCore.dll
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\ref\cleanArchWebApp.ApplicationCore.dll
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\cleanArchWebApp.ApplicationCore.pdb
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.csproj.AssemblyReference.cache
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.AssemblyInfoInputs.cache
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.AssemblyInfo.cs
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.csproj.CoreCompileInputs.cache
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.dll
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\ref\cleanArchWebApp.ApplicationCore.dll
+C:\Users\HASAN\Desktop\cleanarchwebapp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.pdb
+C:\Users\HASAN\Desktop\cleanArchWebApp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\cleanArchWebApp.ApplicationCore.runtimeconfig.json
+C:\Users\HASAN\Desktop\cleanArchWebApp\cleanArchWebApp.ApplicationCore\bin\Debug\net5.0\cleanArchWebApp.ApplicationCore.runtimeconfig.dev.json
+C:\Users\HASAN\Desktop\cleanArchWebApp\cleanArchWebApp.ApplicationCore\obj\Debug\net5.0\cleanArchWebApp.ApplicationCore.genruntimeconfig.cache
